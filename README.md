@@ -22,22 +22,24 @@
 
 ---
 
-## 🗂 Project Structure
-
+## 📂 Project Structure
+```plaintext
 foodsnap-nutrition/
 │
-├── .env                 # API keys (never push to GitHub)
-├── .gitignore           # Ignore .env and unnecessary files
-├── app.py               # Streamlit app entry point
-├── config.py            # Loads API keys and settings
-├── requirements.txt     # Dependencies
-├── services/
+├── .env                       # Stores API keys securely (never push to GitHub)
+├── .gitignore                  # Ignore sensitive & unnecessary files
+├── app.py                      # Main Streamlit app entry point
+├── config.py                   # Loads API keys & app configuration
+├── requirements.txt            # Python dependencies
+│
+├── services/                   # Handles external service interactions
 │   ├── __init__.py
-│   ├── gemini_service.py       # Image recognition via Gemini
-│   └── nutrition_service.py    # Nutrition lookup via Calories Ninja
-└── utils/
+│   ├── gemini_service.py       # Image recognition using Google Gemini API
+│   └── nutrition_service.py    # Nutrition data retrieval via Calories Ninja API
+│
+└── utils/                      # Helper functions
     ├── __init__.py
-    └── image_utils.py          # Image handling helpers
+    └── image_utils.py          # Image processing & formatting utilities
 
 
 ## 🔑 Setup & Installation
